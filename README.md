@@ -24,7 +24,7 @@ Table details(columns and associations) are bellow.
 ## users table
 |Column|Type|Options|
 |------|------------|------|
-|name|string|null:false|
+|name|string|null:false, index: true|
 |email|string|null:false, add_index :users, :email, unique: true|
 |password_digest|string|null:false|
 ### Association
@@ -35,8 +35,8 @@ Table details(columns and associations) are bellow.
 ## members table
 |Column|Type|Options|
 |------|------|------|
-|user_id|integer|null:false, foreign_key: true|
-|group_id|integer|null:false, foreign_key: true|
+|user|references|null:false, foreign_key: true|
+|group|references|null:false, foreign_key: true|
 ### Association
 - belongs_to :group
 - belongs_to :user
@@ -44,10 +44,10 @@ Table details(columns and associations) are bellow.
 ## messages table
 |Column|Type|Options|
 |------|------|------|
-|body|text|null:false|
-|img|string|null: true, default:""|
-|user_id|integer|null:false, foreign_key: true|
-|group_id|integer|null:false, foreign_key: true|
+|body|text||
+|img|string||
+|user|references|null:false, foreign_key: true|
+|group|references|null:false, foreign_key: true|
 ### Association
 - belongs_to :user
 - belongs_to :group
