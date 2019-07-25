@@ -1,0 +1,50 @@
+// サイドバー
+.side_bar{
+  float:left;
+  box-sizing: border-box;
+  width:300px;
+  background-color: #2f3e51;
+  color:white;
+  z-index: 10;
+  &__header{
+    height:100px;
+    background-color: #253141;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 100px;
+    padding:0 20px;
+    &__user-name{
+      float:left;
+    }
+    &__menu{
+      float:right;
+      &__new-group{
+        display:inline-block;
+        text-decoration:none;
+      }
+      &__edit{
+        display:inline-block;
+      }
+      .icon{
+        color:white;
+        text-decoration: none;
+      }
+    }
+  }
+  .groups{
+    box-sizing: border-box;
+    height: calc(100vh - 100px);
+    padding:0 20px;
+    .group{
+      font-weight: bold;
+      &__name{
+        padding-top:20px;
+        font-size: 15px;
+      }
+      &__latest-message{
+        padding:5px 0 40px 0;
+        font-size: 11px;
+      }
+    }
+  }
+}
