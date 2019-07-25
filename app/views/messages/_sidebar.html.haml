@@ -1,0 +1,17 @@
+.side_bar
+  .side_bar__header
+    .side_bar__header__user-name
+      user_name
+    .side_bar__header__menu
+      .side_bar__header__menu__new-group
+      =link_to "#", class:"fa fa-edit icon" do
+        %span<>
+      .side_bar__header__menu__edit
+      =link_to "#", class: "fa fa-cog icon" do
+        %span<>
+  .groups
+    .group
+      .group__name
+        test
+      .group__latest-message
+        test message
