@@ -57,3 +57,5 @@ gem "font-awesome-rails"
 gem "devise"
 gem 'jquery-rails'
 gem "rails-i18n", "~> 5.1"
+gem 'better_errors'
+gem 'binding_of_caller'
