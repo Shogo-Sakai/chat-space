@@ -1,0 +1,13 @@
+// フラッシュバー
+.flash{
+  .notice{
+    background-color:$commit-color;
+    color:white;
+    text-align: center;
+  }
+  .alert{
+    background-color:orangered;
+    color:white;
+    text-align: center;
+  }
+}
