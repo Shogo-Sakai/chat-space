@@ -20,7 +20,8 @@
       .message__text
         test_text
   .form
-    %input(type="text" placeholder="type a message" class="form__box")
+    = form_for [@group, @message] do |f|
+      = f.text_field :body, class: "form__box", placeholder: "type a message"
     .form__text
       %label.form__text__img
         %span<>
