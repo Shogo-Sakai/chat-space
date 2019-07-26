@@ -59,3 +59,5 @@ gem 'jquery-rails'
 gem "rails-i18n", "~> 5.1"
 gem 'better_errors'
 gem 'binding_of_caller'
+gem 'carrierwave', '>= 2.0.0.rc', '< 3.0'
+gem 'mini_magick'
