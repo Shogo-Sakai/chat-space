@@ -10,8 +10,10 @@
       =link_to edit_user_path(current_user), class: "fa fa-cog icon" do
         %span<>
   .groups
-    .group
-      .group__name
-        test
-      .group__latest-message
-        test message
+    - current_user.groups.each do |group|
+      .group
+        =link_to group_messages_path(group) do
+          .group__name
+            = group.name
+          .group__latest-message
+            test message
