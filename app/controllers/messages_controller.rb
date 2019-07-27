@@ -11,6 +11,7 @@ class MessagesController < ApplicationController
       redirect_to group_messages_path(@group), notice: "メッセージを保存しました"
     else
       @messages = @group.messages.includes(:user)
+      flash.now[:alert] = 'メッセージを入力してください。'
       render :index
     end
   end

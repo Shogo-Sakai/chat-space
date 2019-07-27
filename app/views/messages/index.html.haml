@@ -12,19 +12,12 @@
     =link_to "#", class:"btn main-header__edit-btn" do
       Edit
   .messages
-    .message
-      .message__user
-        test_user
-      .message__time
-        20xx/99/99(XXX.) hour.min.sec.
-      .message__text
-        test_text
+    = render @messages
   .form
     = form_for [@group, @message] do |f|
       = f.text_field :body, class: "form__box", placeholder: "type a message"
-    .form__text
-      %label.form__text__img
-        %span<>
-        =fa_icon "image", class:"fa fa-image icon" 
-        %input(type="file" style="display:none")
-    %input.form__submit{type:"submit", value:"Send"}
+      .form__text
+        = f.label :image, class:'form__text__img' do
+          = fa_icon "image", class:"fa fa-image icon" 
+          = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'form__submit'

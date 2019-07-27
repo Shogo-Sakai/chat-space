@@ -7,6 +7,10 @@
     padding:0 40px;
     background-color: white;
     height:100px;
+    border-bottom:1px solid #eeeeee;
+    width:calc(100% - 300px);
+    position:fixed;
+    top:0;
     &__left-box{
       float:left;
       &__group-name{
@@ -25,8 +29,9 @@
       display:block;
       float:right;
       height:40px;
-      padding:0 20px;
+      padding:0 20px 0;
       margin-top:28px;
+      margin-right:80px;
       color:$commit-color;
       text-decoration: none;
       border-style:solid;
@@ -37,13 +42,12 @@
   }
   .messages{
     box-sizing: border-box;
-    padding:46px 40px 0;
+    padding:146px 40px 90px 40px;
     clear:both;
-    border-top:1px solid #eeeeee;
     height:calc(100vh - 100px - 90px);
     background-color: #fafafa;
-    .message{
-      padding-bottom: 40px;
+    .a-message{
+      padding-bottom: 130px;
       &__user{
         display:inline-block;
         font-size: 16px;
@@ -95,6 +99,9 @@
           font-size: 21px;
           cursor:pointer;
           }
+      .hidden{
+        display:none;
+      }
     }
     &__submit{
       box-sizing: border-box;
