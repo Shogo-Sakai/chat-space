@@ -1,7 +1,10 @@
 // フラッシュバー
 .flash{
+  position:fixed;
+  width:100%;
+  top:0;
   z-index: 100;
-  .notice{
+.notice{
     background-color:$commit-color;
     color:white;
     text-align: center;
