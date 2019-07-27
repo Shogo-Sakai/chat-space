@@ -9,7 +9,7 @@
         Member:
         test_user1
         test_user2
-    =link_to "#", class:"btn main-header__edit-btn" do
+    =link_to edit_group_path(@group), class:"btn main-header__edit-btn" do
       Edit
   .messages
     = render @messages

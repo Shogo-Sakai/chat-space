@@ -1,5 +1,6 @@
 // フラッシュバー
 .flash{
+  z-index: 100;
   .notice{
     background-color:$commit-color;
     color:white;
