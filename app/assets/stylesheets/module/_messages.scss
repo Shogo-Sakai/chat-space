@@ -42,9 +42,12 @@
   }
   .messages{
     box-sizing: border-box;
-    padding:146px 40px 90px 40px;
+    padding:146px 40px 0 40px;
     clear:both;
     background-color: #fafafa;
+    width: calc(100vw - 300px);
+    height:calc(100vh - 90px);
+    overflow:auto;
     .a-message{
       padding-bottom: 40px;
       &__user{
