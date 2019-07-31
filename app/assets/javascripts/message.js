@@ -40,11 +40,10 @@ $(document).on('turbolinks:load',function(){
       $(".form__submit").removeAttr("disabled")
     })
     .done(function(message){
-      var html = buildHTML(message)
-      $('.messages').append(html) 
-      $('.form__box').val('')
-      $('#message_image').val('')
+      var html = buildHTML(message);
+      $('.messages').append(html); 
       scrollBottom();
+      $('form')[0].reset();
     })
     .fail(function(){
       alert('エラーが発生しました。もう一度確認ください。')
