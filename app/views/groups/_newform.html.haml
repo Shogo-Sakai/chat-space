@@ -1,0 +1,4 @@
+= form_for @group do |f|
+  -# - debugger
+  = f.submit "登録", class:"chat-group-form__action-btn", "data-disabled-with": "save", url: "groups_path", method: "post"
+  -# %input.chat-group-form__action-btn{"data-disable-with": "Save", name: "commit", type: "submit", value: "Save"}/

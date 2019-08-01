@@ -1,0 +1,2 @@
+= form_for @group do |f|
+  = f.submit "更新", class:"chat-group-form__action-btn", "data-disabled-with": "save", url: "group_path", method: "patch"
