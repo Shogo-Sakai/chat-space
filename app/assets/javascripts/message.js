@@ -24,6 +24,7 @@ $(document).on('turbolinks:load',function(){
     }, 300, 'swing');
   };
 
+
   $("#new_message").on('submit',function(e){
     e.preventDefault();
     var message = new FormData(this);
@@ -49,5 +50,33 @@ $(document).on('turbolinks:load',function(){
       alert('エラーが発生しました。もう一度確認ください。')
     })
     
+  });
+
+
+  $(window).on("load", function(){
+    if (document.URL.match(/messages/)){
+      var reloadMessages = function(){
+        last_message_id = $('.a-message:last').data('id')
+        $.ajax({
+          url: "api/messages#index",
+          type:'GET',
+          dataType: 'json',
+          data: {id: last_message_id}
+        })
+        .done(function(messages){
+          var insertHTML = '';
+          $.each(messages,function(i,message){
+            insertHTML = buildHTML(message);
+            html = insertHTML
+            $('.messages').append(html);
+            scrollBottom();
+          })
+        })
+        .fail(function(){
+          console.log('Failed')
+        })
+      }
+      setInterval( reloadMessages, 5000);
+    }
   })
-})
+});
