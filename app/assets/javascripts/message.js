@@ -73,7 +73,7 @@ $(document).on('turbolinks:load',function(){
           })
         })
         .fail(function(){
-          console.log('Failed')
+          alert('Failed');
         })
       }
       setInterval( reloadMessages, 5000);
